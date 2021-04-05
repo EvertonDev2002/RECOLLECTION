@@ -1,0 +1,35 @@
+hr{
+    width: 9%;
+    position: absolute;
+    border-top: solid 1px var(--color_01);
+}
+
+.line-00, .line-01{
+    left: 0em;
+}
+.line-00{
+    top: 3em;
+}
+
+.line-01{
+    top: 14.5em;
+}
+.line-02, .line-03{
+    right: 0em;
+}
+.line-02{
+    top: 10.5em;
+}
+
+.line-03{
+    top: 20.5em;
+}
+
+@media screen and (max-width: 800px){
+    .line-mobile{
+       width: 18%;
+    }
+    .up-line{
+        top: 18em;
+    }
+}

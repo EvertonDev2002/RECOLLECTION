@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    outline: 0;
+    line-height: 1;
+    list-style: none;
+    box-shadow: 0 0 0;
+    font-size: 1.4rem;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar-track-piece {
+    background-color: var(--color_04);
+}
+::-webkit-scrollbar{
+    width: 0.2em;
+    height: 0.2em;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 0.2em;
+    background-color: var(--color_03);
+}
+.background{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color_04);
+}

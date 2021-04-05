@@ -1,0 +1,12 @@
+:root{
+    /* Cores de campos, bordas e linhas */
+    --color_01: #B8B8B8;
+    --color_02: #6A9BAE;
+    --color_03: #E4E4E4;
+    --color_04: #F2F2F2;
+
+    /* Fontes */
+    --font-chewy: 'Chewy', cursive;
+    --font-gochi: 'Gochi Hand', cursive;
+    --font-yanone: 'Yanone Kaffeesatz', sans-serif;
+}
