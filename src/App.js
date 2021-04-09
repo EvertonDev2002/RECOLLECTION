@@ -5,20 +5,22 @@ import PageMain from './pages/main/main.jsx'
 import PageQuestions from './pages/questions/questions.jsx'
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom"
 
-export default function App(){
+export default class App extends React.Component{
 
-    return (
-        <div className='background'>
-            <Router>
-                <Switch>
-                    <Route exact path="/">
-                        <PageMain />
-                    </Route>
-                    <Route path="/questions">
-                        <PageQuestions />
-                    </Route>
-                </Switch>
-        </Router>
-        </div>
-    )
+    render(){
+        return (
+            <div className='background'>
+                <Router>
+                    <Switch>
+                        <Route exact path="/">
+                            <PageMain />
+                        </Route>
+                        <Route path="/questions">
+                            <PageQuestions />
+                        </Route>
+                    </Switch>
+            </Router>
+            </div>
+        )
+    }
 }

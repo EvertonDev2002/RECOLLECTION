@@ -8,9 +8,9 @@ export default function PageMain(){
 
     return (
         <div className='content'>
-            <LineForPageMain></LineForPageMain>
-            <Logo></Logo>
-            <Form></Form> 
+            <LineForPageMain/>
+            <Logo/>
+            <Form/> 
         </div>
     )
 }
