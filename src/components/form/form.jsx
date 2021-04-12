@@ -17,8 +17,7 @@ export default function Form(){
 
   function NextPage() {
     if(localStorage.getItem('user') != null ){
-
-      console.log('deu certo' + localStorage.getItem('user'))
+      
       history.push("/questions")
     }
   }

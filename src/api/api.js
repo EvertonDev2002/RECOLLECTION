@@ -3,9 +3,9 @@ import rateLimit from 'axios-rate-limit'
 
 const http = rateLimit(axios.create(
     {
-        baseURL:'https://back-end-recollection.herokuapp.com' 
+        baseURL:'https://back-end-recollection.herokuapp.com/recollection' 
     }
-), { maxRequests: 1, perMilliseconds: 3600000000000000000, maxRPS: 0 })
+), { maxRequests: 1, perMilliseconds: 1000, maxRPS: 0 })
 
 
 export default http

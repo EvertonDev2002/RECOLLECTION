@@ -8,11 +8,11 @@ hr{
     left: 0em;
 }
 .line-00-{
-    top: 3em;
+    top: 3.5em;
 }
 
 .line-01-{
-    top: 14.5em;
+    top: 16.5em;
 }
 .line-02-, .line-03-{
     right: 0em;
@@ -30,15 +30,15 @@ hr{
        width: 18%;
     }
     .line-00-mobile-{
-        top: 4.5em;
+        top: 3.5em;
     }
     .line-01-mobile-{
-        top: 14.5em;
+        top: 13.5em;
     }
     .line-02-mobile-{
-        top: 10.5em;
+        top: 9em;
     }
     .line-03-mobile-{
-        top: 18em;
+        top: 16.5em;
     }
 }
