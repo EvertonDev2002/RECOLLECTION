@@ -1,4 +1,4 @@
-hr{
+.question-line-hr{
     width: 9%;
     position: absolute;
     border-top: solid 1px var(--color_01);

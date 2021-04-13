@@ -7,16 +7,29 @@
     justify-content: center;
     border-top: solid 2px var( --color_01);
 }
-.space-questions > h2, span{
+.questions-span{
+    width: 8em;
+    height: 2em;
+    margin: 0.4em;
+    display: flex;
+    cursor: pointer;
+    font-size: 0.7em;
+    text-align: center;
+    align-items: center;
+    white-space: nowrap; 
+    border-radius: 0.7em;
     color: var(--color_02);
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+    justify-content: center;
+    font-family: var( --font-yanone);
+    background-color: var(--color_03);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.space-questions > h2{
+.space-questions-h2{
     font-size: 1em;
     margin-top: 0.5em;
     text-align: center;
     color: var(--color_02);
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: var( --font-yanone);
 }
 .questions{
     width: 100%;
@@ -28,27 +41,12 @@
     flex-direction: row;
     justify-content: center;
 }
-.questions > span{
-    width: 8em;
-    height: 2em;
-    margin: 0.4em;
-    display: flex;
-    cursor: pointer;
-    font-size: 0.7em;
-    text-align: center;
-    align-items: center;
-    white-space: nowrap; 
-    border-radius: 0.7em;
-    justify-content: center;
-    background-color: var(--color_03);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
 @media screen and (max-width: 800px){
 
-    .questions-mobile > h2{
+    .space-questions-h2-mobile{
         font-size: 0.9em;
     }
-    .questions-mobile > div > span{
+    .questions-span-mobile{
         height: 2em;
         width: 7.5em;
         padding: 0.3em;

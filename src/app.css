@@ -21,7 +21,7 @@
     border-radius: 0.2em;
     background-color: var(--color_03);
 }
-.background{
+#root{
     width: 100vw;
     height: 100vh;
     background-color: var(--color_04);

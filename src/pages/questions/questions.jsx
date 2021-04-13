@@ -1,13 +1,15 @@
-import './questions.css'
-import API from '../../api/api.js'
-import { useHistory } from 'react-router'
-import Nav from '../../components/nav/nav.jsx'
-import Card from '../../components/card/card.jsx'
-import React, { useEffect, useState } from 'react'
-import Header from '../../components/header/header.jsx'
-import Music from '../../components/nav/sound/sound_01.mp3'
-import Questions from '../../components/questions/questions.jsx'
-import LineForPageQuestions from '../../components/line/line_for_page_questions/line_for_page_questions.jsx'
+import API from "../../api/api.js"
+import { useHistory } from "react-router"
+import Nav from "../../components/nav/nav.jsx"
+import Card from "../../components/card/card.jsx"
+import Home from "../../components/home/home.jsx"
+import React, { useEffect, useState } from "react"
+import Header from "../../components/header/header.jsx"
+import Player from "../../components/player/player.jsx"
+import Center from "../../components/center/center.jsx"
+import Music from "../../components/player/sound/sound_00.mp3"
+import Questions from "../../components/questions/questions.jsx"
+import LineForPageQuestions from "../../components/line/line_for_page_questions/line_for_page_questions.jsx"
 
 export default function PageQuestions (){
 
@@ -28,48 +30,47 @@ export default function PageQuestions (){
 
         if(result.feedback === ev.target.innerHTML){
     
-            const Int = parseInt( localStorage.getItem('q')) +1
-            const rc = parseInt( localStorage.getItem('rc')) +1
+            const Int = parseInt( localStorage.getItem("q")) +1
+            const rc = parseInt( localStorage.getItem("rc")) +1
     
             if(Int <= 10){
     
-                localStorage.setItem('q', Int)
-                localStorage.setItem('rc', rc)
+                localStorage.setItem("q", Int)
+                localStorage.setItem("rc", rc)
                 setQuestions(Int-1)
-                console.log(Int-1)
             }else{
     
                 if(rc <= 10){
                     
-                    localStorage.setItem('rc', rc)
-                    history.push('/result')
+                    localStorage.setItem("rc", rc)
+                    history.push("/result")
                 }
             }
             
         }else{
     
-            const Int = parseInt( localStorage.getItem('q')) +1
-            const rr = parseInt( localStorage.getItem('rr')) +1
+            const Int = parseInt( localStorage.getItem("q")) +1
+            const rr = parseInt( localStorage.getItem("rr")) +1
            
             if( Int <= 10){
     
-                localStorage.setItem('q', Int)
-                localStorage.setItem('rr', rr)
+                localStorage.setItem("q", Int)
+                localStorage.setItem("rr", rr)
                 setQuestions(Int-1)
             }else{
     
                 if(rr <= 10){
                     
-                    localStorage.setItem('rr', rr)
-                    history.push('/result')
+                    localStorage.setItem("rr", rr)
+                    history.push("/result")
                 }
             }
         }  
     }
 
     return (
-      <div className='content'>
-          <Header questao={localStorage.getItem('q')}/>
+      <Center>
+          <Header questao={localStorage.getItem("q")}/>
           <LineForPageQuestions/>
          <Card 
             key={result.id}
@@ -84,7 +85,10 @@ export default function PageQuestions (){
             feedback={result.feedback}
             click={ClickNext}           
           /> 
-          <Nav Music={Music}/>
-        </div> 
+          <Nav>
+              <Home/>
+              <Player Music={Music}/>
+          </Nav>
+        </Center> 
     )
 }

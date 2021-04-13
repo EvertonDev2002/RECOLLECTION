@@ -1,43 +1,45 @@
 import "./form.css"
-import React from 'react'
+import React from "react"
 import { useHistory } from "react-router-dom"
 
 export default function Form(){
 
-  localStorage.setItem('q', '1')
-  localStorage.setItem('rc', '0')
-  localStorage.setItem('rr', '0')
   const history = useHistory() 
+  localStorage.setItem("q", "1")
+  localStorage.setItem("rc", "0")
+  localStorage.setItem("rr", "0")
+  const user = localStorage.getItem("user")
   
   function onChange(ev){
 
     const {name, value} = ev.target;
-    localStorage.setItem('user', {name, value}.value)
+    localStorage.setItem("user", {name, value}.value)
   }
 
   function NextPage() {
-    if(localStorage.getItem('user') != null ){
-      
+
+    if(user != null ){
+
       history.push("/questions")
     }
   }
 
   const valueInput = () =>{
 
-    if(localStorage.getItem('user') === null){
+    if(user === null){
 
-      return 'Nome'
+      return "Nome"
     }else{
 
-      return localStorage.getItem('user')
+      return user
     }
   }
 
   return(
 
     <form className="form">
-      <input  type="text" placeholder={null ? valueInput() : valueInput()} onChange={onChange}/>
-      <button onClick={NextPage}>Iniciar</button>
+      <input className="form-input" type="text" placeholder={null ? valueInput() : valueInput()} onChange={onChange}/>
+      <button className="form-button" onClick={NextPage}>Iniciar</button>
     </form>
   )
 }

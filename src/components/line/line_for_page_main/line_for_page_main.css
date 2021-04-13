@@ -1,4 +1,4 @@
-hr{
+.line-main-hr{
     width: 9%;
     position: absolute;
     border-top: solid 1px var(--color_01);

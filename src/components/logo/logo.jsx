@@ -1,11 +1,11 @@
-import React from 'react'
-import './logo.css'
+import "./logo.css"
+import React from "react"
 
 export default function Logo(){
 
     return (
-    <>
-        <figure className='logo-cloud mobile'></figure>
-    </>
+        <>
+            <figure className="logo-cloud mobile"></figure>
+        </>
     )
 }
