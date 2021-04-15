@@ -7,7 +7,7 @@ import React, { useEffect, useState } from "react"
 import Header from "../../components/header/header.jsx"
 import Player from "../../components/player/player.jsx"
 import Center from "../../components/center/center.jsx"
-import Music from "../../components/player/sound/sound_00.mp3"
+import Music from "../../components/player/sound/sound_01.mp3"
 import Questions from "../../components/questions/questions.jsx"
 import LineForPageQuestions from "../../components/line/line_for_page_questions/line_for_page_questions.jsx"
 

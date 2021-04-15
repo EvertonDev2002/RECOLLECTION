@@ -10,21 +10,21 @@ export default function Message(){
         const respCert = parseInt(localStorage.getItem('rc'))
         const total = parseInt(localStorage.getItem('rc')) +'/' + parseInt(localStorage.getItem('q'))
 
-        if(respCert === 10){
+        if(respCert === 10 || respCert >=8){
 
             return <>
                 <span className="message-span">Total: {total}</span>
                 <p className="message-p">Parabéns, {user}! Você esteve presente o ano todo!</p>
                 </>
 
-        } else if(respErr === 10){
+        } else if(respErr === 10 || respCert <=4){
 
             return <>
                 <span className="message-span">Total: {total}</span>
                 <p className="message-p"> Parabéns, {user}! Você é aquele que passa de ano sem ir na sala!</p>   
                 </>
 
-        }else if(respErr <= 5){
+        }else if(respErr <= 5 || respCert === 5){
 
             return <>
                 <span className="message-span">Total: {total}</span>
