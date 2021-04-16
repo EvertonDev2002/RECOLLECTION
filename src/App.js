@@ -1,4 +1,3 @@
-import "./app.css"
 import React from "react"
 import "./theme/theme.css"
 import PageMain from "./pages/main/main.jsx"

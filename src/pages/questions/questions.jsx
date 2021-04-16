@@ -1,15 +1,15 @@
-import API from "../../api/api.js"
+import Api from "../../service/api.js"
 import { useHistory } from "react-router"
 import Nav from "../../components/nav/nav.jsx"
 import Card from "../../components/card/card.jsx"
 import Home from "../../components/home/home.jsx"
+import Line from "../../components/line/line.jsx"
 import React, { useEffect, useState } from "react"
 import Header from "../../components/header/header.jsx"
 import Player from "../../components/player/player.jsx"
 import Center from "../../components/center/center.jsx"
 import Music from "../../components/player/sound/sound_01.mp3"
 import Questions from "../../components/questions/questions.jsx"
-import LineForPageQuestions from "../../components/line/line_for_page_questions/line_for_page_questions.jsx"
 
 export default function PageQuestions (){
 
@@ -18,7 +18,7 @@ export default function PageQuestions (){
     
     useEffect(() =>{
 
-        API.get(`/api?pageNumber=${question}&pageSize=1&sortBy=id&sortDirection=ASC`).then((response)=>{
+        Api.get(`/api?pageNumber=${question}&pageSize=1&sortBy=id&sortDirection=ASC`).then((response)=>{
 
             setResult(response.data.content[0])
             
@@ -71,7 +71,7 @@ export default function PageQuestions (){
     return (
       <Center>
           <Header questao={localStorage.getItem("q")}/>
-          <LineForPageQuestions/>
+          <Line line="2"/>
          <Card 
             key={result.id}
             logo={result.photo}
